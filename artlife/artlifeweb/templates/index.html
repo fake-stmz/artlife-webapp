@@ -1,0 +1,106 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtLife - Платформа для художников</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <!-- Логотип -->
+        <div class="logo header-left">
+            <img src="{% static 'imgs/Logo.svg' %}">
+            <p>Art<span style="color: #55E6C1;">Life</span></p>
+        </div>
+        <div class="header-right">
+            <!-- Навигация -->
+            <nav>
+                <ul>
+                    <li>Мастер-классы</li>
+                    <li>Форум</li>
+                    <li>Портфолио</li>
+                </ul>
+            </nav>
+            <!-- Кнопка загрузки работы -->
+            <button class="upload-button">
+                Загрузить работу
+            </button>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+
+    <!-- Приветствие -->
+    <div class="greeting">
+        <h1>Artlife</h1>
+        <hr>
+        <p>Здесь публикуются работы художников, скульпторов, дизайнеров, фотографов и других авторов.<br>ArtLife - платформа, объединяющая профессионалов и любителей искусства.</p>
+        <button class="upload-button upload-button-greeting">
+            Загрузить первую работу
+        </button>
+    </div>
+
+    <!-- Лента вдохновения -->
+    <div class="feed">
+        <h2>Лента вдохновения</h2>
+        <!-- Посты -->
+        <div class="posts-container">
+            <!-- Пост 1 -->
+            <div id="post-1" class="post">
+                <!-- Статистика поста -->
+                <div class="post-stats">
+                    <!-- Лайки -->
+                    <div class="post-likes">5</div>
+                    <!-- Комментарии -->
+                    <div class="post-comments">1</div>
+                </div>
+                <!-- Изображение поста -->
+                <a href="post/"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5"></a>
+            </div>
+            <!-- Пост 2 -->
+            <div id="post-2" class="post">
+                <!-- Статистика поста -->
+                <div class="post-stats">
+                    <!-- Лайки -->
+                    <div class="post-likes">9</div>
+                    <!-- Комментарии -->
+                    <div class="post-comments">4</div>
+                </div>
+                <!-- Изображение поста -->
+                <img src="https://images.unsplash.com/photo-1577084381314-cae9920e6871">
+            </div>
+            <!-- Пост 3 -->
+            <div id="post-3" class="post">
+                <!-- Статистика поста -->
+                <div class="post-stats">
+                    <!-- Лайки -->
+                    <div class="post-likes">7</div>
+                    <!-- Комментарии -->
+                    <div class="post-comments">2</div>
+                </div>
+                <!-- Изображение поста -->
+                <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1">
+            </div>
+            <!-- Пост 4 -->
+            <div id="post-4" class="post">
+                <!-- Статистика поста -->
+                <div class="post-stats">
+                    <!-- Лайки -->
+                    <div class="post-likes">7</div>
+                    <!-- Комментарии -->
+                    <div class="post-comments">2</div>
+                </div>
+                <!-- Изображение поста -->
+                <img src="https://images.unsplash.com/photo-1533158326339-7f3cf2404354">
+            </div>
+        </div>
+        <!-- Больше постов -->
+        <button class="more-button">
+            Ещё
+        </button>
+    </div>
+</body>
+</html>
