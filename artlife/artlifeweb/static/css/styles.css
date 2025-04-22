@@ -1,0 +1,241 @@
+/* Основное и мультиюз */
+
+:root {
+    --main-color: #6D214F;
+    --bg-color: #FFF9EB;
+    --highlight-color: #55E6C1;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+button {
+    background-color: var(--highlight-color);
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.upload-button {
+    font-weight: bold;
+    padding: 10px 60px;
+}
+
+/* Шапка */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 36px;
+    gap: 5px;
+}
+
+.logo img {
+    width: 1.5em;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.upload-button-header {
+    font-size: 20px;
+    font-weight: normal;
+    box-sizing: border-box;
+    border: 2px solid var(--highlight-color);
+    padding: 10px 15px;
+}
+
+/* Основной контент */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Приветствие */
+.greeting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    padding: 40px;
+}
+
+.greeting-container {
+    background-image: linear-gradient(to bottom, transparent 25%, var(--bg-color)), url('https://images.unsplash.com/photo-1513364776144-60967b0f800f');
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.greeting h1 {
+    font-size: 64px;
+    margin: 0 0 10px 0;
+}
+
+.greeting hr {
+    width: 400px;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    margin: 0;
+}
+
+.greeting p {
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0 20px 0;
+}
+
+/* Лента вдохновения */
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feed h2 {
+    font-size: 24px;
+    margin: 0 auto 15px 5%;
+}
+
+.posts-container {
+    position: relative;
+    display: grid;
+    width: 90%;
+    padding: 0 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.posts-container::after {
+    content: "";
+    pointer-events: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+    background: linear-gradient(to bottom, transparent 75%, var(--bg-color) 100%);
+}
+
+.post {
+    position: relative;
+}
+
+.post-stats {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    background-color: var(--highlight-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.post-likes::before {
+    content: url('/static/imgs/Like.svg');
+    color: black;
+    display: inline-block;
+    line-height: 16px;
+    width: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.post-comments::before {
+    content: url('/static/imgs/Comment.svg');
+    color: black;
+    display: inline-block;
+    line-height: 16px;
+    width: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.post img {
+    width: 100%;
+    aspect-ratio: 1 / 1.25;
+    object-fit: cover;
+}
+
+.more-button {
+    background: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.more-button::after {
+    content: url('/static/imgs/More.svg');
+    display: inline-block;
+    line-height: 16px;
+    width: 16px;
+    vertical-align: middle;
+}
+
+.more-button:hover {
+    color: black;
+    background: none;
+}
+
+.more-button:hover::after {
+    animation: more-button-hover 0.5s ease-in-out;
+}
+
+@keyframes more-button-hover {
+    25% { transform: translateY(3px); }
+    75% { transform: translateY(-4px); }
+    100% { transform: translateY(1px); }
+}

@@ -10,134 +10,186 @@
 <body>
     <!-- Шапка -->
     <header>
-        <!-- Логотип -->
-        <div class="logo header-left">
-            <img src="{% static 'imgs/Logo.svg' %}">
-            <p>Art<span style="color: #55E6C1;">Life</span></p>
+        <div class="header-left">
+            <!-- Логотип -->
+            <div class="logo">
+                <img src="{% static 'imgs/Logo.svg' %}">
+                Art<span style="color: #55E6C1;">Life</span>
+            </div>
         </div>
         <div class="header-right">
             <!-- Навигация -->
             <nav>
                 <ul>
-                    <li>Мастер-классы</li>
-                    <li>Форум</li>
-                    <li>Портфолио</li>
+                    <li><a href="#">Мастер-классы</a></li>
+                    <li><a href="#">Форум</a></li>
+                    <li><a href="#">Портфолио</a></li>
                 </ul>
             </nav>
             <!-- Кнопка загрузки работы -->
-            <button class="upload-button">
+            <button class="upload-button upload-button-header">
                 Загрузить работу
             </button>
         </div>
     </header>
 
     <!-- Основной контент -->
-
-    <!-- Приветствие -->
-    <div class="greeting">
-        <h1>Artlife</h1>
-        <hr>
-        <p>Здесь публикуются работы художников, скульпторов, дизайнеров, фотографов и других авторов.<br>ArtLife - платформа, объединяющая профессионалов и любителей искусства.</p>
-        <button class="upload-button upload-button-greeting">
-            Загрузить первую работу
-        </button>
-    </div>
-
-    <!-- Лента вдохновения -->
-    <div class="feed">
-        <h2>Лента вдохновения</h2>
-        <!-- Посты -->
-        <div class="posts-container">
-            <!-- Пост 1 -->
-            <div id="post-1" class="post">
-                <!-- Статистика поста -->
-                <div class="post-stats">
-                    <!-- Лайки -->
-                    <div class="post-likes">5</div>
-                    <!-- Комментарии -->
-                    <div class="post-comments">1</div>
-                </div>
-                <!-- Изображение поста -->
-                <a href="post/"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5"></a>
-            </div>
-            <!-- Пост 2 -->
-            <div id="post-2" class="post">
-                <!-- Статистика поста -->
-                <div class="post-stats">
-                    <!-- Лайки -->
-                    <div class="post-likes">9</div>
-                    <!-- Комментарии -->
-                    <div class="post-comments">4</div>
-                </div>
-                <!-- Изображение поста -->
-                <img src="https://images.unsplash.com/photo-1577084381314-cae9920e6871">
-            </div>
-            <!-- Пост 3 -->
-            <div id="post-3" class="post">
-                <!-- Статистика поста -->
-                <div class="post-stats">
-                    <!-- Лайки -->
-                    <div class="post-likes">7</div>
-                    <!-- Комментарии -->
-                    <div class="post-comments">2</div>
-                </div>
-                <!-- Изображение поста -->
-                <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1">
-            </div>
-            <!-- Пост 4 -->
-            <div id="post-4" class="post">
-                <!-- Статистика поста -->
-                <div class="post-stats">
-                    <!-- Лайки -->
-                    <div class="post-likes">0</div>
-                    <!-- Комментарии -->
-                    <div class="post-comments">0</div>
-                </div>
-                <!-- Изображение поста -->
-                <img src="https://images.unsplash.com/photo-1533158326339-7f3cf2404354">
+    <main>
+        <!-- Приветствие -->
+        <div class="greeting-container">
+            <div class="greeting">
+                <h1>ArtLife</h1>
+                <hr>
+                <p>Здесь публикуются работы художников, скульпторов, дизайнеров, фотографов и других авторов.<br>ArtLife - платформа, объединяющая профессионалов и любителей искусства.</p>
+                <button class="upload-button">
+                    Загрузить первую работу
+                </button>
             </div>
         </div>
-        <!-- Больше постов -->
-        <button class="more-button">
-            Ещё
-        </button>
-    </div>
-    <!-- Онлайн курсы -->
-    <div class="courses">
-        <h2>Онлайн курсы</h2>
-        <!-- Курсы -->
-        <div class="courses-container">
-            <!-- Курс 1 -->
-            <div id="course-1" class="course">
-                <!-- Изображение курса -->
-                <img src="https://images.unsplash.com/photo-1688588428113-d24195a109bc">
-                <!-- Информация о курсе -->
-                <div class="course-info">
-                    <div class="course-name">Уроки живописи</div>
-                    <p>Данный курс посвящен живописи. Здесь вы научитесь понимать природные красоты и передавать их на холст.</p>
-                    <div class="course-teacher">Росс Б.В.</div>
-                    <!-- Кнопка записи на курс -->
-                    <button class="sign-course-button">
-                        Записаться
-                    </button>
+
+        <!-- Лента вдохновения -->
+        <div class="feed">
+            <h2>Лента вдохновения</h2>
+            <!-- Посты -->
+            <div class="posts-container">
+                <!-- Пост 1 -->
+                <div id="post-1" class="post">
+                    <!-- Статистика поста -->
+                    <div class="post-stats">
+                        <!-- Лайки -->
+                        <div class="post-likes">5</div>
+                        <!-- Комментарии -->
+                        <div class="post-comments">1</div>
+                    </div>
+                    <!-- Изображение поста -->
+                    <a href="post/"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5"></a>
+                </div>
+                <!-- Пост 2 -->
+                <div id="post-2" class="post">
+                    <!-- Статистика поста -->
+                    <div class="post-stats">
+                        <!-- Лайки -->
+                        <div class="post-likes">9</div>
+                        <!-- Комментарии -->
+                        <div class="post-comments">4</div>
+                    </div>
+                    <!-- Изображение поста -->
+                    <img src="https://images.unsplash.com/photo-1577084381314-cae9920e6871">
+                </div>
+                <!-- Пост 3 -->
+                <div id="post-3" class="post">
+                    <!-- Статистика поста -->
+                    <div class="post-stats">
+                        <!-- Лайки -->
+                        <div class="post-likes">7</div>
+                        <!-- Комментарии -->
+                        <div class="post-comments">2</div>
+                    </div>
+                    <!-- Изображение поста -->
+                    <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1">
+                </div>
+                <!-- Пост 4 -->
+                <div id="post-4" class="post">
+                    <!-- Статистика поста -->
+                    <div class="post-stats">
+                        <!-- Лайки -->
+                        <div class="post-likes">0</div>
+                        <!-- Комментарии -->
+                        <div class="post-comments">0</div>
+                    </div>
+                    <!-- Изображение поста -->
+                    <img src="https://images.unsplash.com/photo-1533158326339-7f3cf2404354">
                 </div>
             </div>
-            <!-- Курс 2 -->
-            <div id="course-2" class="course">
-                <!-- Изображение курса -->
-                <img src="https://images.unsplash.com/photo-1688588428113-d24195a109bc">
-                <!-- Информация о курсе -->
-                <div class="course-info">
-                    <div class="course-name"></div>
-                    <p></p>
-                    <div class="course-teacher"></div>
-                    <!-- Кнопка записи на курс -->
-                    <button class="sign-course-button">
-                        Записаться
-                    </button>
+            <!-- Больше постов -->
+            <button class="more-button">
+                Ещё
+            </button>
+        </div>
+
+        <!-- Онлайн курсы -->
+        <div class="courses">
+            <h2>Онлайн курсы</h2>
+            <!-- Контейнер курсов -->
+            <div class="courses-container">
+                <!-- Курс 1 -->
+                <div id="course-1" class="course">
+                    <!-- Изображение курса -->
+                    <img src="https://images.unsplash.com/photo-1688588428113-d24195a109bc">
+                    <!-- Информация о курсе -->
+                    <div class="course-info">
+                        <div class="course-name">Уроки живописи</div>
+                        <p>Данный курс посвящен живописи. Здесь вы научитесь понимать природные красоты и передавать их на холст.</p>
+                        <div class="course-teacher">Росс Б.В.</div>
+                        <!-- Кнопка записи на курс -->
+                        <button class="sign-course-button">
+                            Записаться
+                        </button>
+                    </div>
+                </div>
+                <!-- Курс 2 -->
+                <div id="course-2" class="course">
+                    <!-- Изображение курса -->
+                    <img src="https://images.unsplash.com/photo-1649406458887-2b6561c36a4d">
+                    <!-- Информация о курсе -->
+                    <div class="course-info">
+                        <div class="course-name">Уроки графики</div>
+                        <p>Данный курс научит вас искусству компьютерной графики. Вы получите знания работы в программах семейства Adobe, а также изучите 3D графику в Blender.</p>
+                        <div class="course-teacher">Джокер Д.Д.</div>
+                        <!-- Кнопка записи на курс -->
+                        <button class="sign-course-button">
+                            Записаться
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <!-- Конкурсы -->
+        <div class="competitions">
+            <h2>Конкурсы</h2>
+            <!-- Контейнер конкурсов -->
+            <div class="competitions-container">
+                <!-- Конкурс 1 -->
+                <div id="competition-1" class="competition">
+                    <!-- Изображение конкурса -->
+                    <img src="https://images.unsplash.com/photo-1612787245122-d7c39b8ac365">
+                    <!-- Информация о конкурсе -->
+                    <div class="competition-info">
+                        <div class="competition-name">Конкурс рисунка</div>
+                        <p>Конкурс традиционных художников, чьи инструменты лишь кисть, палитра и холст.</p>
+                        <div class="competition-prize">10.000 рублей</div>
+                        <!-- Кнопка участия в конкурсе -->
+                        <button class="participate-button">
+                            Участвовать
+                        </button>
+                    </div>
+                </div>
+                <!-- Конкурс 2 -->
+                <div id="competition-2" class="competition">
+                    <!-- Изображение конкурса -->
+                    <img src="https://images.unsplash.com/photo-1612787245122-d7c39b8ac365">
+                    <!-- Информация о конкурсе -->
+                    <div class="competition-info">
+                        <div class="competition-name">Конкурс скульптуры</div>
+                        <p>Объявлен конкурс скульптуры на древнегреческую тему. Успейте подать заявку!</p>
+                        <div class="competition-prize">25.000 рублей</div>
+                        <!-- Кнопка участия в конкурсе -->
+                        <button class="participate-button">
+                            Участвовать
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <a href="#">Правила сообщества</a>
+        <a href="#" class="soc-net-icon"><img src="{% static 'imgs/Twitter.svg' %}"></a>
+        <a href="#" class="soc-net-icon"><img src="{% static 'imgs/Facebook.svg' %}"></a>
+        <a href="#" class="soc-net-icon"><img src="{% static 'imgs/Instagram.svg' %}"></a>
+    </footer>
 </body>
 </html>
