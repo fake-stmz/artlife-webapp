@@ -1,10 +1,116 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Пост 1 | Artlife</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+    <!-- Шапка -->
+    <header>
+        <div class="header-left">
+            <!-- Логотип -->
+            <div class="logo">
+                <img src="{% static 'imgs/Logo.svg' %}">
+                Art<span style="color: #55E6C1;">Life</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <!-- Навигация -->
+            <nav>
+                <ul>
+                    <li><a href="#">Мастер-классы</a></li>
+                    <li><a href="#">Форум</a></li>
+                    <li><a href="#">Портфолио</a></li>
+                </ul>
+            </nav>
+            <!-- Кнопка загрузки работы -->
+            <button class="upload-button upload-button-header">
+                Загрузить работу
+            </button>
+        </div>
+    </header>
 
+    <!-- Основной контент -->
+    <main>
+        <div class="view-post">
+            <!-- Изображение поста -->
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5">
+            <!-- Информация о посте -->
+            <div class="post-related">
+                <!-- Основная информация -->
+                <div class="post-main-info">
+                    <!-- Опубликовавший пользователь -->
+                    <div class="user post-publisher">
+                        <!-- Аватар -->
+                        <div class="avatar">
+                            FC
+                        </div>
+                        <!-- Никнейм -->
+                        <div class="username">
+                            Franchesco C.
+                        </div>
+                    </div>
+                    <!-- Лайки -->
+                    <div class="post-view-likes">
+                        5
+                    </div>
+                </div>
+                <!-- О посте -->
+                <div class="post-about">
+                    <div class="post-name">
+                        Разные всякие цветы в вазе
+                    </div>
+                    <div class="post-description">
+                        Это картинка.<br>
+                        На ней всякие цветы разные.<br>
+                        И они в вазе.<br>
+                        Всякие цветы.<br>
+                        Разные.<br>
+                        Да.
+                    </div>
+                </div>
+                <!-- Комментарии -->
+                <div class="post-view-comments-container">
+                    <h2>Комментарии</h2>
+                    <div class="post-view-comments">
+                        <!-- Комментарий -->
+                        <div id="comment-1" class="post-comment">
+                            <!-- Комментатор -->
+                            <div class="user">
+                                <!-- Аватар -->
+                                <div class="avatar">
+                                    AH
+                                </div>
+                                <!-- Никнейм -->
+                                <div class="username">
+                                    Adolf H.
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                Вау, круто. Это же ваза! А в ней цветы! Класс...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="write-comment">
+                        <input class="write-comment-input-box" placeholder="Написать комментарий...">
+                        <button content="comment-button">
+                            Отправить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <a href="#">Правила сообщества</a>
+        <a href="#" class="soc-net-icon"><img src="{% static 'imgs/Twitter.svg' %}"></a>
+        <a href="#" class="soc-net-icon"><img src="{% static 'imgs/Facebook.svg' %}"></a>
+        <a href="#" class="soc-net-icon"><img src="{% static 'imgs/Instagram.svg' %}"></a>
+    </footer>
 </body>
 </html>
