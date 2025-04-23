@@ -269,7 +269,7 @@ main {
 }
 
 .course img {
-    width: 40%;
+    width: 275px;
     aspect-ratio: 1.25 / 1;
     object-fit: cover;
 }
@@ -312,7 +312,7 @@ main {
 }
 
 .competition img {
-    width: 40%;
+    width: 275px;
     aspect-ratio: 1.25 / 1;
     object-fit: cover;
 }
